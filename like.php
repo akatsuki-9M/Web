@@ -7,6 +7,18 @@ $sql="select * from answer WHERE answer_id='$r'";
 $result=mysql_query($sql) or die('fine');
 $row4 = mysql_fetch_array($result);
 $m=$row4['like']+1;
+<?php
+$count=1;
+
+if(current $row['perc']==next $row['perc'])//
+{
+echo "";//stop incrementing and output the same count. Because current perc and next perc have the same value, I don't know how to make echo here.
+}
+else
+{
+echo $count++; //start incrementing
+}
+?>
 
 $result=mysql_query("UPDATE `tdf_new`.`answer` SET `like` = '$m' WHERE `answer`.`answer_id` ='$r';") or die('helo');
 header("location:questionview.php?qid=14")
